@@ -31,6 +31,19 @@ namespace CourseEnquiryApp.ViewModels
             get { return _overview; }
             set { Set(ref _overview, value); }
         }
+        private DateTime _startDate;
 
+        public DateTime StartDate
+        {
+            get { return _startDate; }
+            set { Set(ref _startDate, value); }
+        }
+        private DateTime _endDate;
+
+        public DateTime EndDate
+        {
+            get { return _endDate; }
+            set { Set(ref _endDate, value); }
+        }
     }
 }

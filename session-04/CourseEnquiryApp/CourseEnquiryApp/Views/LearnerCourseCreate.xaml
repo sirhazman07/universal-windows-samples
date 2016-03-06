@@ -14,26 +14,63 @@
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
-        <TextBlock Text="Course Name" Style="{ThemeResource TitleTextBlockStyle}"
-                   Grid.Row="0"/>
-        <TextBox Margin="15" Grid.Column="1" Text="{x:Bind ViewModel.Name, Mode=TwoWay}" />
-        <TextBlock Text="Course Summary" Style="{ThemeResource TitleTextBlockStyle}"
-                   Grid.Row="1"/>
-        <TextBox Margin="15" Grid.Column="1" Grid.Row="1" Text="{x:Bind ViewModel.Summary, Mode=TwoWay}" />
-        <TextBlock Text="Course Overview" Style="{ThemeResource TitleTextBlockStyle}"
-                   Grid.Row="2"/>
-        <TextBox Margin="15" Grid.Column="1" Grid.Row="2" Text="{x:Bind ViewModel.Overview, Mode=TwoWay}" />
-        <Button Content="Submit" Grid.Column="1" Grid.Row="3"
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0">
+            <TextBlock Text="Add New Course" Padding="25" FontSize="28" FontWeight="SemiBold" FontFamily="Default"
+                       Width="300"
+                       HorizontalAlignment="Left"
+                       Style="{ThemeResource TitleTextBlockStyle}"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="left" VerticalAlignment="Center" Grid.Row="1">
+            <TextBlock Text="Course Name" Padding="20" Style="{ThemeResource TitleTextBlockStyle}"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="2">
+            <TextBox Margin="15" Width="auto" Text="{x:Bind ViewModel.Name, Mode=TwoWay}" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3">
+            <TextBlock Text="Course Summary" Padding="20" Style="{ThemeResource TitleTextBlockStyle}"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="4">
+            <TextBox Margin="15" Height="70" Width="auto" Text="{x:Bind ViewModel.Summary, Mode=TwoWay}" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="5">
+            <TextBlock Text="Course Overview" Padding="20" Style="{ThemeResource TitleTextBlockStyle}"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="6">
+            <TextBox Margin="15"  Height="120" Width="auto" Text="{x:Bind ViewModel.Name, Mode=TwoWay}" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="7">
+            <TextBlock Text="Start Date" Padding="20" Style="{ThemeResource TitleTextBlockStyle}"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="8">
+            <DatePicker Margin="15" Width="auto" Date="{x:Bind ViewModel.StartDate, Mode=TwoWay}" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="9" >
+            <TextBlock Text="End Date" Padding="20" Style="{ThemeResource TitleTextBlockStyle}"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="10"  >
+            <DatePicker Margin="15" Width="auto" Date="{x:Bind ViewModel.EndDate, Mode=TwoWay}" />
+        </StackPanel>
+        <Button Content="Submit" Width="300px"  Padding="5" HorizontalAlignment="Center" Grid.Row="12"
                 Click="Button_Click"/>
     </Grid>
 </Page>

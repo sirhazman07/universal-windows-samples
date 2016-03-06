@@ -17,5 +17,11 @@
         <TextBlock Style="{ThemeResource BodyTextBlockStyle}"
                                    Margin="0,9" 
                                    Text="{x:Bind SelectedCourse.Overview}" />
+        <TextBlock Style="{ThemeResource BodyTextBlockStyle}"
+                                   Margin="0,9" 
+                                   Text="{x:Bind SelectedCourse.StartDate}" />
+        <TextBlock Style="{ThemeResource BodyTextBlockStyle}"
+                                   Margin="0,9" 
+                                   Text="{x:Bind SelectedCourse.EndDate}" />
     </StackPanel>
 </Page>
