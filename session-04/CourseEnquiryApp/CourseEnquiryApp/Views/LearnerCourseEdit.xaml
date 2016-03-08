@@ -70,6 +70,9 @@
             <DatePicker Margin="15" Width="auto" Date="{x:Bind ViewModel.EndDate, Mode=TwoWay}" />
         </StackPanel>
         <Button Content="Submit" Width="300px"  Padding="5" HorizontalAlignment="Center" Grid.Row="12"
-                Click="Button_Click"/>        
+                Click="Button_Click"/>
+
+        <Button Content="Delete" Width="300px"  Padding="5" HorizontalAlignment="Center" Grid.Row="13"
+                Click="Button_Click_1"/>
     </Grid>
 </Page>

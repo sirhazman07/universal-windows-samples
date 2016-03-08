@@ -8,6 +8,13 @@ namespace CourseEnquiryApp.ViewModels
 {
     class LearnerCourseEditViewModel : ViewModelBase
     {
+        private string _id;
+
+        public string Id
+        {
+            get { return _id; }
+            set { Set(ref _id, value); }
+        }
         private string _name;
 
         public string Name
